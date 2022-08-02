@@ -1,0 +1,22 @@
+{
+  "name": "restaurant-page",
+  "version": "1.0.0",
+  "description": "restaurant web page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fn-2199/restaurant-page.git"
+  },
+  "keywords": [
+    "restaurant"
+  ],
+  "author": "Patrisha Alfonso <alfonsopatrisha@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fn-2199/restaurant-page/issues"
+  },
+  "homepage": "https://github.com/fn-2199/restaurant-page#readme"
+}
