@@ -1,1 +1,1 @@
-const PLACEHOLDER = "Hi";
+console.log("Hello world");
