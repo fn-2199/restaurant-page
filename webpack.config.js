@@ -10,7 +10,7 @@ module.exports = {
   },
   plugins: [new HtmlWebpackPlugin({ //generates new index.html and injects all generated bundles
     hash: true,
-    title: 'Barcada',
+    title: 'handfull',
     template: './src/index.html'
 })],
   output: { //outputs bundled file
