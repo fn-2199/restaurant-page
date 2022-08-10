@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 @font-face {
     font-family: 'titania-regular';
     src: url('./assets/fonts/Titania-Regular.ttf') format('opentype');
@@ -17,6 +19,7 @@
     --main-font: 'titania-regular', sans-serif;
     --secondary-font: 'ss-nickson-one', sans-serif;
     --sub-font: 'darling', sans-serif;
+    --text-font: 'Roboto', sans-serif;
     --main-color: #fedd33;
 }
 
@@ -58,12 +61,21 @@ h2 {
     text-shadow: 2px 3px 5px rgba(0,0,0,0.5);
 }
 
-ul {
-    list-style: none;
+.content > ul {
     cursor: pointer;
 }
 
-ul, 
+ul {
+    list-style: none;
+}
+
+.menu,
+.contact {
+    font-family: var(--text-font);
+    text-align: left;
+}
+
+.content > ul, 
 .information {
     font-family: var(--secondary-font);
     font-size: 3rem;
