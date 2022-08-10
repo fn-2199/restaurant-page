@@ -63,10 +63,12 @@ h2 {
 
 .content > ul {
     cursor: pointer;
+    list-style: none;
 }
 
-ul {
-    list-style: none;
+
+.menu > ul > ul {
+    list-style: inside;
 }
 
 .menu,
