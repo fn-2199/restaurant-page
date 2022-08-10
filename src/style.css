@@ -1,8 +1,85 @@
-body {
+@font-face {
+    font-family: 'titania-regular';
+    src: url('./assets/fonts/Titania-Regular.ttf') format('opentype');
+}
+
+@font-face {
+    font-family: 'ss-nickson-one';
+    src: url('./assets/fonts/SSNicksonOne.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'darling';
+    src: url('./assets/fonts/Darling.ttf') format('truetype');
+}
+
+:root {
+    --main-font: 'titania-regular', sans-serif;
+    --secondary-font: 'ss-nickson-one', sans-serif;
+    --sub-font: 'darling', sans-serif;
+    --main-color: #fedd33;
+}
+
+body,
+h1,
+h2,
+ul,
+p {
     margin: 0;
+    padding: 0;
+}
+
+body {
     background-image: url('./assets/images/bg.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
+    color: var(--main-color);
 }
+
+.title {
+    position: relative;
+}
+
+h1 {
+    font-size: 8rem;
+    font-family: var(--main-font);
+    text-shadow: 2px 3px 5px rgba(0,0,0,0.5);
+}
+
+h2 {
+    font-size: 3rem;
+    font-family: var(--sub-font);
+    color: white;
+    position: absolute;
+    top: 90px;
+    right: 15px;
+    text-shadow: 2px 3px 5px rgba(0,0,0,0.5);
+}
+
+ul {
+    list-style: none;
+    cursor: pointer;
+}
+
+ul, 
+.information {
+    font-family: var(--secondary-font);
+    font-size: 3rem;
+    display: flex;
+    gap: 100px;
+    margin: 25px 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+
