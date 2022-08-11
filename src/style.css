@@ -25,7 +25,8 @@
 
 body,
 h1,
-h2,
+h2, 
+h3,
 ul,
 p {
     margin: 0;
@@ -40,6 +41,18 @@ body {
     background-attachment: fixed;
     color: var(--main-color);
 }
+
+/* Navigation */
+
+nav > ul {
+    list-style: none;
+}
+
+nav > ul > li {
+    cursor: pointer;
+}
+
+/* Home Page */
 
 header {
     position: relative;
@@ -59,14 +72,6 @@ h2 {
     top: 90px;
     right: 0px;
     text-shadow: 2px 3px 5px rgba(0,0,0,0.5);
-}
-
-nav > ul {
-    list-style: none;
-}
-
-nav > ul > li {
-    cursor: pointer;
 }
 
 
@@ -100,6 +105,23 @@ footer {
 }
 
 .sub-bg {
-    background: black;
-    backdrop-filter: blur(50px);
+    background: rgba(0, 0, 0, 0.65);
+}
+
+article {
+    padding: 20px;
+}
+
+article#contactPage {
+    display: flex;
+}
+
+h3 {
+   /* font-family: var(--sub-font); */
+   letter-spacing: 3px;
+   font-size: 2rem;
+}
+
+h3 ~ h3 {
+    margin-top: 30px;
 }
