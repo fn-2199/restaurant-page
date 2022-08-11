@@ -57,7 +57,7 @@ h2 {
     color: white;
     position: absolute;
     top: 90px;
-    right: 15px;
+    right: 0px;
     text-shadow: 2px 3px 5px rgba(0,0,0,0.5);
 }
 
@@ -97,4 +97,9 @@ footer {
     text-align: center;
     height: 100vh;
     background: rgba(0, 0, 0, 0.3);
+}
+
+.sub-bg {
+    background: black;
+    backdrop-filter: blur(50px);
 }
