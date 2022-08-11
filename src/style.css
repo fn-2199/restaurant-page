@@ -74,17 +74,6 @@ h2 {
     text-shadow: 2px 3px 5px rgba(0,0,0,0.5);
 }
 
-
-.menu > ul > ul {
-    list-style: inside;
-}
-
-.menu,
-.contact {
-    font-family: var(--text-font);
-    text-align: left;
-}
-
 nav > ul, 
 footer {
     font-family: var(--secondary-font);
@@ -104,6 +93,8 @@ footer {
     background: rgba(0, 0, 0, 0.3);
 }
 
+/* General Sub Pages */
+
 .sub-bg {
     background: rgba(0, 0, 0, 0.65);
 }
@@ -111,11 +102,25 @@ footer {
 article {
     padding: 20px;
     color: white;
+    font-family: var(--text-font);
+    height: min(75%, 600px);
+    width: min(75%, 820px);
 }
+
+h3 {
+    /* letter-spacing: 3px; */
+    font-size: 1.8rem;
+ }
+ 
+ h3 ~ h3 {
+     margin-top: 30px;
+ }
+
+/* Contact Page */
 
 article#contactPage {
     display: flex;
-    gap: 30px;
+    gap: 20px;
 }
 
 #contactPage div:first-child {
@@ -124,11 +129,7 @@ article#contactPage {
     justify-content: center;
 }
 
-h3 {
-   letter-spacing: 3px;
-   font-size: 2rem;
-}
-
-h3 ~ h3 {
-    margin-top: 30px;
+#map {
+    height: 600px;
+    width: auto;
 }
