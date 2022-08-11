@@ -1,3 +1,5 @@
+import Map from './assets/images/map.png';
+
 const contactObj = {
     address: '42 Wallaby Way Sydney, Australia',
     number: '(777) 420-6969',
@@ -7,7 +9,7 @@ const contactObj = {
 
 function generateContact() {
     const article = document.createElement('article');
-    article.setAttribute('id', 'contactPage');
+    article.id = "contactPage";
     article.classList.add('sub-bg');
 
     const contactInfo = document.createElement('div');
@@ -30,11 +32,15 @@ function generateContact() {
     emailInfo.textContent = contactObj.email;
 
 
-    const interactiveMap = document.createElement('div');
-    interactiveMap.setAttribute('id', 'map');
+    const map = document.createElement('div');
+    const mapImg = new Image();
+    mapImg.src = Map;
+    mapImg.alt = "Location of handfull restaurant";
+    mapImg.id = "map";
 
+    map.appendChild(mapImg);
     contactInfo.append(location, locationInfo, hours, hoursInfo, phoneEmail, phoneInfo, emailInfo);
-    article.append(contactInfo, interactiveMap);
+    article.append(contactInfo, map);
 
     return article;
 }

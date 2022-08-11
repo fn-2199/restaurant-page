@@ -1,6 +1,6 @@
 function generateMenu() {
     const article = document.createElement('article');
-    article.setAttribute('id', 'menuPage');
+    article.id= "menuPage";
     article.classList.add('sub-bg');
     
     const p = document.createElement('p');
