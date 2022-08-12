@@ -1,7 +1,7 @@
 import Map from './assets/images/map.png';
 
 const contactObj = {
-    address: '42 Wallaby Way Sydney, Australia',
+    address: {street: "189 The Grove Drive", cityZip: "Los Angeles, CA 90036"},
     number: '(777) 420-6969',
     schedule: 'Open Everyday 11AM - 8PM',
     email: 'restaurant@handfull.com'
@@ -16,8 +16,10 @@ function generateContact() {
 
     const location = document.createElement('h3');
     location.textContent = 'Location';
-    const locationInfo = document.createElement('p');
-    locationInfo.textContent = contactObj.address;
+    const locationStreet = document.createElement('p');
+    locationStreet.textContent = contactObj.address.street;
+    const locationCityZip = document.createElement('p');
+    locationCityZip.textContent = contactObj.address.cityZip;
 
     const hours = document.createElement('h3');
     hours.textContent = 'Hours';
@@ -39,7 +41,7 @@ function generateContact() {
     mapImg.id = "map";
 
     map.appendChild(mapImg);
-    contactInfo.append(location, locationInfo, hours, hoursInfo, phoneEmail, phoneInfo, emailInfo);
+    contactInfo.append(location, locationStreet, locationCityZip, hours, hoursInfo, phoneEmail, phoneInfo, emailInfo);
     article.append(contactInfo, map);
 
     return article;

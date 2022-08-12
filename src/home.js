@@ -1,6 +1,6 @@
 const titleObj = {
     title: 'handfull',
-    subtitle: 'eat how you are meant to'
+    subtitle: "traditional filipino dining"
 }
 
 function generateHome() {

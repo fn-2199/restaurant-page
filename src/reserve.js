@@ -1,13 +1,13 @@
 function generateReserve() {
-    const article = document.createElement('article');
-    article.classList.add('sub-bg');
+    const form = document.createElement('form');
+    form.classList.add('sub-bg');
     
     const p = document.createElement('p');
     p.textContent = "This is the reservation page."
 
-    article.append(p);
+    form.append(p);
 
-    return article;
+    return form;
 }
 
 export default generateReserve;

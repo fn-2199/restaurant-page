@@ -31,9 +31,16 @@ const generateFrontPage = function() {
     const footer = document.createElement('footer');
 
     for (let key in contactObj) {
-        if (key == 'email') continue;
         const p = document.createElement('p');
-        p.textContent = contactObj[key];
+
+        if (key == 'address') {
+            p.textContent = Object.values(contactObj[key]).join(' ');
+        } else if (key == 'number' || key == 'schedule') {
+            p.textContent = contactObj[key];
+        } else {
+            continue;
+        }
+
         footer.appendChild(p);
     }
 
