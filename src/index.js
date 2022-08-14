@@ -1,6 +1,6 @@
 import './style.css';
 import HOME from './home';
-import MENU from './menu';
+import {MENU} from './menu';
 import RESERVE from "./reserve";
 import {contactObj, CONTACT} from "./contact";
 

@@ -14,9 +14,9 @@ const entreesItem = (imageSrc, foodName) => {
     return {imageSrc, foodName}
 }
 
-function generateMenu() {
-    let entreesItemsArray = [entreesItem(grilledChicken, "Grilled Chicken Inasal"), entreesItem(lechonKawali, "Lechon Kawali/Deep Fried Pork"), entreesItem(chickenBBQ, "Filipino Chicken BBQ"), entreesItem(longanisa, "Longanisa Filipino Sausage"), entreesItem(tocino, "Tocino/Sweet Garlic Pork"), entreesItem(grilledLiempo, "Grilled Liempo/Grilled Pork Belly"), entreesItem(porkBBQ, "Pork BBQ"), entreesItem(hipon, "Hipon/Whole Shrimp"), entreesItem(tahong, "Tahong/Mussels"), entreesItem(chickenAdobo, "Chicken Adobo")];
+let entreesItemsArray = [entreesItem(grilledChicken, "Grilled Chicken Inasal"), entreesItem(lechonKawali, "Lechon Kawali/Deep Fried Pork"), entreesItem(chickenBBQ, "Filipino Chicken BBQ"), entreesItem(longanisa, "Longanisa Filipino Sausage"), entreesItem(tocino, "Tocino/Sweet Garlic Pork"), entreesItem(grilledLiempo, "Grilled Liempo/Grilled Pork Belly"), entreesItem(porkBBQ, "Pork BBQ"), entreesItem(hipon, "Hipon/Whole Shrimp"), entreesItem(tahong, "Tahong/Mussels"), entreesItem(chickenAdobo, "Chicken Adobo")];
 
+function generateMenu() {
     const article = document.createElement('article');
     article.id= "menuPage";
     article.classList.add('sub-bg');
@@ -37,7 +37,6 @@ function generateMenu() {
     entreesContainer.classList.add('entrees-container');
 
     entreesItemsArray.forEach((entree) => {
-
         let entreeElement = document.createElement('div');
         entreeElement.classList.add('entree-element');
 
@@ -56,4 +55,4 @@ function generateMenu() {
     return article;
 }
 
-export default generateMenu;
+export {entreesItemsArray, generateMenu as MENU};
