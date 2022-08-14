@@ -43,7 +43,23 @@ function generateReserve() {
         form.appendChild(div);
     }
 
+    for (let entree of entreesItemsArray) {
+        const label = document.createElement('label');
+        label.setAttribute('for', `${entree.camelCase}`);
+        label.textContent = entree.foodName;
 
+        const input = document.createElement('input');
+        input.type = 'checkbox';
+        input.name = 'entreeItem';
+        input.id = input.value = entree.camelCase;
+
+        form.append(input, label)
+    }
+
+    // Create checkbox fieldset
+
+    const fieldset = document.createElement('fieldset');
+    const legend = document.createElement('legend');
 
     return form;
 }

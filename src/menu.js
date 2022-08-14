@@ -10,11 +10,11 @@ import tahong from './assets/images/tahong.jpg';
 import chickenAdobo from './assets/images/chickenAdobo.jpg';
 
 
-const entreesItem = (imageSrc, foodName) => {
-    return {imageSrc, foodName}
+const entreesItem = (imageSrc, foodName, camelCase) => {
+    return {imageSrc, foodName, camelCase}
 }
 
-let entreesItemsArray = [entreesItem(grilledChicken, "Grilled Chicken Inasal"), entreesItem(lechonKawali, "Lechon Kawali/Deep Fried Pork"), entreesItem(chickenBBQ, "Filipino Chicken BBQ"), entreesItem(longanisa, "Longanisa Filipino Sausage"), entreesItem(tocino, "Tocino/Sweet Garlic Pork"), entreesItem(grilledLiempo, "Grilled Liempo/Grilled Pork Belly"), entreesItem(porkBBQ, "Pork BBQ"), entreesItem(hipon, "Hipon/Whole Shrimp"), entreesItem(tahong, "Tahong/Mussels"), entreesItem(chickenAdobo, "Chicken Adobo")];
+let entreesItemsArray = [entreesItem(grilledChicken, "Grilled Chicken Inasal", 'grilledChiken'), entreesItem(lechonKawali, "Lechon Kawali/Deep Fried Pork", 'lechonKawali'), entreesItem(chickenBBQ, "Filipino Chicken BBQ", 'chickenBBQ'), entreesItem(longanisa, "Longanisa Filipino Sausage", 'longanisa'), entreesItem(tocino, "Tocino/Sweet Garlic Pork", 'tocino'), entreesItem(grilledLiempo, "Grilled Liempo/Grilled Pork Belly", 'grilledLiempo'), entreesItem(porkBBQ, "Pork BBQ", 'porkBBQ'), entreesItem(hipon, "Hipon/Whole Shrimp", 'hipon'), entreesItem(tahong, "Tahong/Mussels", 'tahong'), entreesItem(chickenAdobo, "Chicken Adobo", 'chickenAdobo')];
 
 function generateMenu() {
     const article = document.createElement('article');
