@@ -8,7 +8,7 @@ const categoryElements = (title, array, camelCase) => {
     return {title, array, camelCase}
 }
 
-let basicInfoArray = [formElements('firstName', "First Name", 'text'), formElements('lastName', "Last Name", 'text'), formElements('phoneNumber', "Phone Number", 'tel'), formElements('email', "Email", 'email'), formElements('numofPpl', "Number of Party", 'number'), formElements('dateTime', "Date & Time", 'datetime-local')];
+let basicInfoArray = [formElements('firstName', "First Name", 'text'), formElements('lastName', "Last Name", 'text'), formElements('phoneNumber', "Phone Number", 'tel'), formElements('email', "Email", 'email'), formElements('numOfPpl', "Number of Party", 'number'), formElements('dateTime', "Date & Time", 'datetime-local')];
 
 let paymentInfoArray = [formElements('cardNumber', "Card Number", 'tel'), formElements('expirationDate', "Expiration Date", 'month'), formElements('cvv', "CVV", 'tel'), formElements('zipCode', "Card Zip Code", 'text')];
 
@@ -49,6 +49,7 @@ function generateReserve() {
                 const input = document.createElement('input');
                 input.type = element.inputType;
                 input.name = element.camelCase;
+
                 input.setAttribute('required', '');
     
                 strong.appendChild(abbr);
@@ -57,6 +58,11 @@ function generateReserve() {
                 fieldset.appendChild(div);
             }
         } else {
+            const checkBoxContainer = document.createElement('div');
+
+            const p = document.createElement('p');
+            p.textContent = "Choose up to any six items for your Boodle Fight Service";
+            
             for (let entree of category.array) {
                 const label = document.createElement('label');
                 const span = document.createElement('span');
@@ -68,7 +74,7 @@ function generateReserve() {
                 input.value = entree.camelCase;
     
                 label.append(input, span);
-                fieldset.appendChild(label);
+                checkBoxContainer.appendChild(label);
             }
 
             const div = document.createElement('div');
@@ -77,13 +83,20 @@ function generateReserve() {
 
             const textarea = document.createElement('textarea');
             textarea.name = 'comments';
+            textarea.cols = '60';
+            textarea.rows = '2';
 
             label.append(textarea);
             div.appendChild(label);
-            fieldset.appendChild(div);
+            fieldset.append(p, checkBoxContainer, div);
 
-        } 
+        }
+        
     })
+
+    const button = document.createElement('button');
+    button.textContent = "Reserve Table";
+    form.append(button);
 
     return form;
 }
